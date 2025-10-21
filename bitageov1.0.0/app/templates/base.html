@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitácora Geográfica</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pastel.css') }}">
+  <!-- HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Bitácora Geográfica</h1>
+    <p class="subtitle">Registro de observación territorial</p>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <small>Proyecto educativo · Flask + Jinja2 + HTMX · {{ 2025 }}</small>
+  </footer>
+</body>
+</html>

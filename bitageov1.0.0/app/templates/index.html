@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Ingresar observación:</h2>
+  <form hx-post="{{ url_for('crear_obs') }}" hx-target="#rows" hx-swap="beforeend" class="grid-form">
+    <label>Fecha
+      <input type="date" name="fecha" value="{{ hoy }}">
+    </label>
+    <label>Lugar
+      <input type="text" name="lugar" placeholder="Patio del liceo">
+    </label>
+    <label>Latitud
+      <input type="number" step="any" name="lat" placeholder="-34.34" value="0">
+    </label>
+    <label>Longitud
+      <input type="number" step="any" name="lon" placeholder="-56.71" value="0">
+    </label>
+    <label>Tipo de ambiente
+      <select name="tipo_ambiente">
+        {% for t in TIPOS_AMBIENTE %}<option value="{{t}}">{{t}}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Uso del suelo
+      <select name="usos_suelo">
+        {% for t in USOS_SUELO %}<option value="{{t}}">{{t}}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Cobertura/relieve
+      <select name="cobertura_relieve">
+        {% for t in COBERTURA_RELIEVE %}<option value="{{t}}">{{t}}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Intervención humana
+      <select name="intervencion_humana">
+        {% for t in INTERVENCION_HUMANA %}<option value="{{t}}">{{t}}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Conectividad
+      <select name="conectividad">
+        {% for t in CONECTIVIDAD_TERRITORIAL %}<option value="{{t}}">{{t}}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Valor eco-cultural
+      <select name="valor_ecocultural">
+        {% for t in VALOR_ECOCULTURAL %}<option value="{{t}}">{{t}}</option>{% endfor %}
+      </select>
+    </label>
+    <label class="full">Descripción
+      <textarea name="descripcion" rows="2" placeholder="Qué observé... sombra, bancos, basura, vegetación"></textarea>
+    </label>
+    <div class="actions">
+      <button type="submit" class="btn">Guardar</button>
+    </div>
+  </form>
+</section>
+
+<section class="card">
+  <div class="flex">
+    <h2>Observaciones</h2>
+    <img src="{{ url_for('chart_png') }}" alt="Gráfico por tipo de ambiente" class="chart">
+  </div>
+  <table class="table pastel">
+    <thead>
+      <tr>
+        <th>#</th><th>Fecha</th><th>Lugar</th><th>Lat</th><th>Lon</th>
+        <th>Ambiente</th><th>Uso</th><th>Cobertura</th><th>Interv.</th><th>Conexión</th><th>Valor</th><th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody id="rows">
+      {% for r in rows %}{% include "_row.html" with context %}{% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}
