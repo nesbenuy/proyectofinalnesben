@@ -5,16 +5,11 @@ Interfaz **web** para registrar observaciones geográficas con **criterios**.
 ## Requisitos
 python -m venv .venv
 # Win: .venv\Scripts\Activate.ps1
-# Linux/Mac: source .venv/bin/activate
-pip install -r requirements.txt
 ```
 
 ## Cómo correr
 # desde la carpeta del proyecto
 python -m app.app
-# o:
-# set FLASK_APP=app/app.py 
-# flask run
 ```
 
 ## ¿Qué incluye?
