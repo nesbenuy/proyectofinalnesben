@@ -1,4 +1,4 @@
-# Bitácora Geográfica – Web (Flask + Jinja2 + HTMX)
+# Bitácora Geográfica v1.0.0 – Web (Flask + Jinja2 + HTMX)
 
 Interfaz **web** para registrar observaciones geográficas con **criterios**.
 
