@@ -1,8 +1,0 @@
-fecha,lugar,lat,lon,tipo_ambiente,usos_suelo,cobertura_relieve,intervencion_humana,conectividad,valor_ecocultural,descripcion
-2025-10-21,,0,0,urbano,residencial,mosaico_mixto,baja,baja,ninguno,"Ordenado, prolijo."
-2025-09-18,Plaza Arriaga,0,0,urbano,residencial,mosaico_mixto,alta,alta,local,Incluye juegos inclusivos y amplio espacio de esparcimiento.
-2025-10-21,Patio del liceo,-34.3401,-56.7105,urbano,residencial,pradera/llanura,media,media,local,"Sombra de árboles, bancos y buena ventilación."
-2025-10-21,Plaza de Deportes,-34.3389,-56.7120,urbano,turistico,pradera/llanura,media,alta,local,"Presencia de árboles, canchas y zona de descanso con sombra."
-2025-10-21,Orilla del Río San José,-34.3352,-56.7021,costero,conservacion,ribera/costa,baja,media,nacional,"Vegetación ribereña, aves acuáticas y leve erosión en la orilla."
-2025-10-21,Chacra de Canelón Chico,-34.5920,-56.3155,rural,agropecuario,pradera/llanura,alta,media,departamental,"Cultivos de hortalizas, maquinaria agrícola, riego por aspersión."
-2025-10-21,Sierra de Mahoma,-34.2248,-56.8743,serrano,forestal,sierras/piedra,baja,baja,snap,"Formaciones rocosas, pastizales naturales, senderos y cartelería SNAP."
