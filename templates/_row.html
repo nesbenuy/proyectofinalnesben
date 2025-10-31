@@ -1,0 +1,22 @@
+<tr>
+  <td>{{ loop.index if loop is defined else row_index }}</td>
+  <td>{{ r.fecha }}</td>
+  <td>{{ r.lugar }}</td>
+  <td>{{ r.lat }}</td>
+  <td>{{ r.lon }}</td>
+  <td>{{ r.tipo_ambiente }}</td>
+  <td>{{ r.usos_suelo }}</td>
+  <td>{{ r.cobertura_relieve }}</td>
+  <td>{{ r.intervencion_humana }}</td>
+  <td>{{ r.conectividad }}</td>
+  <td>{{ r.valor_ecocultural }}</td>
+  <td>{{ r.descripcion }}</td>
+  <td class="action-col">
+    <button class="icon-btn danger"
+            title="Eliminar"
+            hx-delete="/obs/{{ r._key }}"
+            hx-target="closest tr"
+            hx-swap="outerHTML"
+            hx-confirm="¿Eliminar este registro?">🗑️</button>
+  </td>
+</tr>

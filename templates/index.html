@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="form-wrap">
+  <form id="obs-form"
+        hx-post="/obs"
+        hx-target="#tabla"
+        hx-swap="afterbegin"
+        hx-on::after-request="this.reset(); htmx.trigger('#chart-wrap','refreshChart')">
+    <label>Fecha
+      <input type="date" name="fecha" value="{{ hoy }}" required>
+    </label>
+
+    <label>Lugar
+      <input type="text" name="lugar" placeholder="Ej.: Arazatí, San José" required>
+    </label>
+
+    <label>Latitud
+      <input type="text" name="lat" placeholder='Ej.: 34°54&#39;11.2"S o -34.903' required>
+    </label>
+
+    <label>Longitud
+      <input type="text" name="lon" placeholder='Ej.: 56°9&#39;51.1"W o -56.164' required>
+    </label>
+
+    <label>Tipo de ambiente
+      <select name="tipo_ambiente" required>
+        <option value="" selected disabled>— elegir tipo de ambiente —</option>
+        {% for v in TIPOS_AMBIENTE %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+      </select>
+    </label>
+
+    <label>Uso del suelo
+      <select name="usos_suelo" required>
+        <option value="" selected disabled>— elegir uso del suelo —</option>
+        {% for v in USOS_SUELO %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+      </select>
+    </label>
+
+    <label>Cobertura/relieve
+      <select name="cobertura_relieve" required>
+        <option value="" selected disabled>— elegir cobertura/relieve —</option>
+        {% for v in COBERTURA_RELIEVE %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+      </select>
+    </label>
+
+    <label>Intervención humana
+      <select name="intervencion_humana" required>
+        <option value="" selected disabled>— elegir intervención —</option>
+        {% for v in INTERVENCION_HUMANA %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+      </select>
+    </label>
+
+    <label>Conectividad
+      <select name="conectividad" required>
+        <option value="" selected disabled>— elegir conectividad —</option>
+        {% for v in CONECTIVIDAD_TERRITORIAL %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+      </select>
+    </label>
+
+    <label>Valor eco-cultural
+      <select name="valor_ecocultural" required>
+        <option value="" selected disabled>— elegir valor eco-cultural —</option>
+        {% for v in VALOR_ECOCULTURAL %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+      </select>
+    </label>
+
+    <label>Descripción
+      <textarea name="descripcion" rows="2" placeholder="Observación breve..."></textarea>
+    </label>
+
+    <button type="submit" class="btn-guardar">Guardar</button>
+  </form>
+</section>
+
+<section id="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th><th>Fecha</th><th>Lugar</th><th>Lat</th><th>Lon</th>
+        <th>Ambiente</th><th>Uso suelo</th><th>Relieve</th>
+        <th>Interv.</th><th>Conect.</th><th>Valor eco-cult.</th><th>Descripción</th>
+        <th class="action-col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tabla">
+      {% for r in rows %}{% include "_row.html" %}{% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section id="chart-wrap"
+         hx-get="/chart"
+         hx-trigger="load, refreshChart from:body"
+         hx-target="#chart-slot"
+         hx-swap="innerHTML">
+  <div id="chart-slot">
+    {% include "chart_img.html" with context %}
+  </div>
+</section>
+
+{% endblock %}
