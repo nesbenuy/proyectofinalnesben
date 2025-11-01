@@ -4,13 +4,10 @@ fecha,lugar,lat,lon,tipo_ambiente,usos_suelo,cobertura_relieve,intervencion_huma
 2025-10-30,Punta del Este – La Mano (Playa Brava),-34.9710,-54.9510,costero,turístico,dunas,alta,departamental,alto,Ícono turístico en la costa atlántica.
 2025-10-30,Colonia del Sacramento – Barrio Histórico,-34.4710,-57.8510,urbano,histórico,barranca,media,nacional,alto,Sitio Patrimonio Mundial UNESCO.
 2025-10-30,Piriápolis – Puerto,-34.8620,-55.2740,costero,portuario,costa rocosa,media,departamental,medio,Puerto deportivo y pesquero.
-2025-10-30,Minas – Cerro Artigas (Lavalleja),-34.3700,-55.2370,serrano,recreativo,sierras,media,departamental,medio,Mirador en entorno serrano.
 2025-10-30,Santa Lucía (Canelones) – Puente viejo,-34.4550,-56.3910,urbano,residencial,llanura,media,departamental,medio,Ciudad ribereña sobre el río Santa Lucía.
 2025-10-30,Cabo Polonio (Rocha) – Pueblo,-34.3970,-53.7820,natural_protegido,turístico,dunas,baja,departamental,alto,Área protegida con acceso controlado.
 2025-10-30,La Paloma (Rocha) – Faro,-34.6650,-54.1630,costero,turístico,costa rocosa,media,departamental,alto,Faro histórico con vistas al océano.
-2025-10-30,Salto – Costanera Norte,-31.3880,-57.9600,urbano,recreativo,llanura,alta,nacional,medio,"Ribera del río Uruguay, espacios públicos."
 2025-10-30,Paysandú – Costanera,-32.3170,-58.0810,urbano,recreativo,llanura,media,nacional,medio,"Frente al río Uruguay, ramblas y parques."
 2025-10-30,Fray Bentos – Ex Frigorífico Anglo,-33.1160,-58.3170,urbano,industrial,llanura,media,nacional,alto,Sitio Patrimonio Mundial industrial.
 2025-10-30,Mercedes – Rambla sobre río Negro,-33.2570,-58.0310,urbano,recreativo,llanura,media,departamental,medio,Costanera arbolada sobre el río Negro.
 2025-10-30,Tacuarembó – Plaza 19 de Abril,-31.7170,-55.9810,urbano,residencial,llanura,media,departamental,medio,Centro cívico de la ciudad.
-2025-10-30,Rivera – Plaza Internacional,-30.9050,-55.5500,urbano,comercial,llanura,alta,nacional,medio,Frontera seca Rivera–Livramento.
